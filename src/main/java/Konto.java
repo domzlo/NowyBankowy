@@ -23,8 +23,13 @@ public class Konto {
     }
 
     public void przelewNa(int kwotaPrzelewu, Konto kontoOdbiorcy) {
-        kontoOdbiorcy.saldo = kontoOdbiorcy.saldo + kwotaPrzelewu;
-        this.saldo = this.saldo - kwotaPrzelewu;
+
+        if (this != kontoOdbiorcy) {
+            kontoOdbiorcy.saldo = kontoOdbiorcy.saldo + kwotaPrzelewu;
+            this.saldo = this.saldo - kwotaPrzelewu;
+        } else {
+            System.out.println("Nie możesz przelać pieniędzy na własne konto!");
+        }
     }
 //    this.saldo odnosi się do salda konta, na którym wykonujemy tą metodę!!!
 
