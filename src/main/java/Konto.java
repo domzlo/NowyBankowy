@@ -13,8 +13,8 @@ public class Konto {
     }
 
     public Konto(String numerKonta0, String właścicielNazwisko0) {
-        this.numerKonta = numerKonta;
-        this.właścicielNazwisko = właścicielNazwisko;
+        this.numerKonta = numerKonta0;
+        this.właścicielNazwisko = właścicielNazwisko0;
         saldo = 0;
     }
 
@@ -22,8 +22,9 @@ public class Konto {
         saldo += kwotaWpłaty;
     }
 
-    public void przelew(int kwotaPrzelewu) {
-        saldo = saldo - kwotaPrzelewu;
+    public void przelewNa(int kwotaPrzelewu, Konto konto1, Konto konto2) {
+        konto1.saldo = konto1.saldo - kwotaPrzelewu;
+        konto2.saldo = konto2.saldo + kwotaPrzelewu;
     }
 
     public String toString () {
