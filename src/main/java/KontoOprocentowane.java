@@ -34,9 +34,8 @@ public class KontoOprocentowane {
     }
 
     public int wyliczOdsetki (int oprocentowanie) {
-        oprocentowanie = this.oprocentowanie;
-        saldo = this.saldo;
-        odsetki = (saldo * (oprocentowanie/100));
+        this.oprocentowanie = oprocentowanie;
+        odsetki = (saldo * oprocentowanie / 100);
         return saldo += odsetki;
         }
 

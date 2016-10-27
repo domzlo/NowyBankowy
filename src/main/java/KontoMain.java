@@ -6,7 +6,7 @@ public class KontoMain {
         Konto kontoKarola = new Konto("222222222", 12, "Kowalski");
 
         KontoOprocentowane kontoAsi = new KontoOprocentowane("111111111", 13000, "Kowalska");
-        KontoOprocentowane kontoJarka = new KontoOprocentowane("222222222", 150000, "Kowalski");
+        KontoOprocentowane kontoJarka = new KontoOprocentowane("222222222", 1000, "Kowalski");
 
 //        System.out.println("Saldo początkowe Aliny i Karola: \n konto Aliny: " + kontoAliny.saldo +
 //        "\n konto Karola: " + kontoKarola.saldo +"\n");
@@ -21,6 +21,6 @@ public class KontoMain {
 //        System.out.println(kontoAliny.toString());
 
 
-        System.out.println(kontoJarka.wyliczOdsetki(10));
+        System.out.println(kontoJarka.wyliczOdsetki(5));
     }
 }
