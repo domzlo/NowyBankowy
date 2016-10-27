@@ -5,7 +5,7 @@ public class KontoMain {
         Konto kontoAliny = new Konto("111111111", 13000, "Kowalska");
         Konto kontoKarola = new Konto("222222222", 12, "Kowalski");
 
-        kontoAliny.przelewNa(1000, kontoAliny, kontoKarola);
+        kontoAliny.przelewNa(1000, kontoKarola);
         kontoKarola.wpłata(5000);
 
 

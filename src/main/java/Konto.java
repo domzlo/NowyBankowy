@@ -22,10 +22,11 @@ public class Konto {
         saldo += kwotaWpłaty;
     }
 
-    public void przelewNa(int kwotaPrzelewu, Konto konto1, Konto konto2) {
-        konto1.saldo = konto1.saldo - kwotaPrzelewu;
-        konto2.saldo = konto2.saldo + kwotaPrzelewu;
+    public void przelewNa(int kwotaPrzelewu, Konto kontoOdbiorcy) {
+        kontoOdbiorcy.saldo = kontoOdbiorcy.saldo + kwotaPrzelewu;
+        this.saldo = this.saldo - kwotaPrzelewu;
     }
+//    this.saldo odnosi się do salda konta, na którym wykonujemy tą metodę!!!
 
     public String toString () {
         return "Właścicielem konta jest Pan/i " + właścicielNazwisko + ". Numer konta to: " + numerKonta +
