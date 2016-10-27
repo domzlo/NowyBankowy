@@ -27,7 +27,7 @@ public class KontoOprocentowane {
 
         if (this != kontoOdbiorcy) {
             kontoOdbiorcy.saldo = kontoOdbiorcy.saldo + kwotaPrzelewu;
-            this.saldo = this.saldo - kwotaPrzelewu;
+            this.saldo = saldo - kwotaPrzelewu;
         } else {
             System.out.println("Nie możesz przelać pieniędzy na własne konto!");
         }
